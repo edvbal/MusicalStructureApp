@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">MusicalStructureApp</string>
+    <!-- Labels for tabs -->
+    <string name="playlists">Playlists</string>
+    <string name="tracks">Tracks</string>
+    <string name="albums">Albums</string>
+    <string name="artists">Artists</string>
+    <string name="genres">Genres</string>
+    <string name="buyMoreSongs">More songs</string>
+    <!-- Explanation TextView for playlist layout -->
+    <string name="explanationPlaylist">When the app opens it goes to the playlist tab</string>
+</resources>
