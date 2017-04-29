@@ -5,9 +5,24 @@
     tools:context="com.example.android.musicalstructureapp.Fragments.PlaylistFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/playlists" />
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textColor="@android:color/background_light"
+
+            android:text="@string/playlistsTextView" />
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            />
+    </LinearLayout>
+
 
 </FrameLayout>

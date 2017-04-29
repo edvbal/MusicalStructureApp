@@ -6,7 +6,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 import com.example.android.musicalstructureapp.Fragments.AlbumsFragment;
-import com.example.android.musicalstructureapp.Fragments.ArtistsFragment;
+import com.example.android.musicalstructureapp.Fragments.NowPlayingFragment;
 import com.example.android.musicalstructureapp.Fragments.BuySongsFragment;
 import com.example.android.musicalstructureapp.Fragments.GenresFragment;
 import com.example.android.musicalstructureapp.Fragments.PlaylistFragment;
@@ -27,7 +27,7 @@ public class FragmentAdapter extends FragmentPagerAdapter {
         tabTitles = new String[]{  context.getApplicationContext().getString(R.string.playlists),
                 context.getString(R.string.tracks),
                 context.getString(R.string.albums),
-                context.getString(R.string.artists),
+                context.getString(R.string.nowPlaying),
                 context.getString(R.string.genres),
                 context.getString(R.string.buyMoreSongs)};
         PAGE_COUNT = context.getResources().getInteger(R.integer.slideTabsCount);
@@ -43,7 +43,7 @@ public class FragmentAdapter extends FragmentPagerAdapter {
         } else if (position == 2) {
             return new AlbumsFragment();
         } else if (position == 3) {
-            return new ArtistsFragment();
+            return new NowPlayingFragment();
         } else if (position == 4) {
             return new GenresFragment();
         } else {

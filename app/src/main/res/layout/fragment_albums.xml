@@ -8,6 +8,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/albums" />
-
+        android:text="@string/albumsTextView"
+        android:textColor="@android:color/background_light"
+        />
 </FrameLayout>
