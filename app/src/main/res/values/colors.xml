@@ -9,4 +9,5 @@
     <color name="tabLayoutSelected">#B2F4F9</color>
     <color name="tabLayoutBackground">#2B2B2B</color>
     <color name="appBarText">#BCBCBC</color>
+    <color name="nowPlayingTexts">#DEDCE5</color>
 </resources>
