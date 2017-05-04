@@ -32,11 +32,11 @@
         depending on the ImageView that is pressed.
     </string>
     <string name="explanationSearch">This activity should be able to show up songs or playlists
-    that matches what user entered and open them up when clicked by sending explicit Intent </string>
-    <string name="explanationBuySongs">This activity should be able to show up songs that were added
-        to cart by the user in a ListView. When user clicks on "Proceed to checkout" button
-        implicit Intent will be sent to web browser with a link to pay for the songs.
-    that matches what user entered and open them up when clicked by sending explicit Intent </string>
+    that matches what user entered in a ListView and open them up when clicked by sending explicit
+        Intent to the NowPlayingActivity</string>
+    <string name="explanationBuySongs">This activity should be able to show up songs in a ListView
+        that were added to the cart by the user. When user clicks on "Proceed to checkout" button
+        implicit Intent will be sent to a web browser with a link to pay for the songs. </string>
     <string name="explanationNowPlaying">This activity should be able to show song image,
     play, stop, change song, shuffle songs and activate repeat modes. MediaPlayer class is needed to
         add this functionality\nThere are a back button at the top which sends explicit intent to
