@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    tools:context="com.example.android.musicalstructureapp.MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/backgroundPlayNow"
+        android:gravity="center_vertical"
+        android:paddingLeft="16dp"
+        android:text="Playlists"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:layout_marginBottom="16dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/playlist1"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:paddingLeft="16dp"
+                            android:src="@drawable/electro_house" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="Electro House"
+                            android:paddingLeft="16dp"
+
+                            android:textColor="@color/appBarText" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/playlist2"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:paddingLeft="16dp"
+                            android:src="@drawable/favorite_music" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:paddingLeft="16dp"
+                            android:text="Favorite music"
+                            android:textColor="@color/appBarText" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/playlistAdd"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:paddingLeft="16dp"
+                            android:src="@drawable/add_playlist" />
+
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:paddingLeft="16dp"
+                            android:text="Add playlist"
+                            android:textColor="@color/appBarText" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+
+        </LinearLayout>
+    </ScrollView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/backgroundPlayNow"
+        android:gravity="center_vertical"
+        android:paddingLeft="16dp"
+        android:text="Recent songs"
+        android:textAlignment="center"
+        android:textColor="@color/white" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3">
+
+    </ListView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="@string/explanationHomeActivity"
+            android:textColor="@color/white" />
+    </ScrollView>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/backgroundPlayNow">
+
+        <android.support.design.widget.TabItem
+            android:id="@+id/homeMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/home_icon" />
+
+        <android.support.design.widget.TabItem
+            android:id="@+id/nowPlayingMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/now_playing_icon" />
+
+        <android.support.design.widget.TabItem
+            android:id="@+id/favoritesMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/favorites_icon" />
+
+        <android.support.design.widget.TabItem
+            android:id="@+id/searchMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/search_icon" />
+
+        <android.support.design.widget.TabItem
+            android:id="@+id/shoppingMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/shopping_icon" />
+    </android.support.design.widget.TabLayout>
+
+</LinearLayout>

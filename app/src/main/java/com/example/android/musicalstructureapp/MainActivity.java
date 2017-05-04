@@ -4,9 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -14,29 +11,49 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-
-    ImageView playPause;
-    ImageView prevSong;
-    ImageView nextSong;
-    ImageView songImage;
-
+    ImageView playList1;
+    ImageView playList2;
+    ImageView playListAdd;
     TabLayout tabLayout;
-    boolean isPlayButtonActive = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setTitle(R.string.app_name);
-        setContentView(R.layout.main_playlists);
+        setContentView(R.layout.main_layout);
+
+        playList1 = (ImageView) findViewById(R.id.playlist1);
+        playList2 = (ImageView) findViewById(R.id.playlist2);
+        playListAdd = (ImageView) findViewById(R.id.playlistAdd);
 
         tabLayout = (TabLayout) findViewById(R.id.tabLayout);
+
+        playList1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, PlaylistActivity.class);
+                startActivity(intent);
+            }
+        });
+        playList2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, PlaylistActivity.class);
+                startActivity(intent);
+            }
+        });
+        playListAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(),"Feature needs to be implemented",Toast.LENGTH_SHORT).show();
+            }
+        });
 
         tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 switch (tabLayout.getSelectedTabPosition()) {
                     case 0:
-                        homeActivity();
                         return;
                     case 1:
                         nowPlayingActivity();
@@ -51,7 +68,6 @@ public class MainActivity extends AppCompatActivity {
                         shoppingActivity();
                         return;
                     default:
-                        homeActivity();
                 }
             }
             @Override
@@ -68,10 +84,6 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Launching new activity from menu
      */
-    private void homeActivity() {
-        Intent i = new Intent(MainActivity.this, MainActivity.class);
-        startActivity(i);
-    }
 
     private void searchActivity() {
         Intent i = new Intent(MainActivity.this, SearchActivity.class);

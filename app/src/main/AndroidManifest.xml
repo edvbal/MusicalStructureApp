@@ -24,6 +24,9 @@
             android:label="Now Playing"/>
         <activity android:name=".SearchActivity"
             android:label="Search"/>
+        <activity android:name=".PlaylistActivity"
+            android:label="Playlist"/>
+
     </application>
 
 </manifest>

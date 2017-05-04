@@ -10,4 +10,6 @@
     <color name="tabLayoutBackground">#2B2B2B</color>
     <color name="appBarText">#BCBCBC</color>
     <color name="nowPlayingTexts">#DEDCE5</color>
+    <color name="white">#FFFFFF</color>
+
 </resources>
