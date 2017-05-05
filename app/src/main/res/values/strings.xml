@@ -1,49 +1,62 @@
 <resources>
     <string name="app_name">Musical Structure App</string>
-    <!-- Labels for tabs -->
-    <string name="playlists">Playlists</string>
-    <string name="tracks">Tracks</string>
-    <string name="albums">Albums</string>
+    <!-- main_layout texts -->
+    <!--/=======================================================================================/-->
+    <!-- AppBar labels -->
+    <string name="favorites">Favorites</string>
+    <string name="buySongs">Buy Songs</string>
+    <string name="search">Search</string>
     <string name="nowPlaying">Now playing</string>
-    <string name="genres">Genres</string>
-    <string name="buyMoreSongs">More songs</string>
-    <string name="songNamePlayNow">A song name</string>
+    <string name="playlist">Playlist</string>
+    <!-- Label TextViews -->
+    <string name="recentSongs">Recent songs</string>
+    <string name="playlists">Playlists</string>
+    <!-- Playlist names -->
+    <string name="electroHouse">Electro house</string>
+    <string name="favoriteMusic">Favorite music</string>
+    <string name="addPlaylist">Add playlist</string>
+    <!--/=======================================================================================/-->
 
-    <string name="playlistsTextView">This is playlists TextView</string>
-    <string name="tracksTextView">This is tracks TextView</string>
-    <string name="albumsTextView">This is albums TextView</string>
-    <string name="nowPlayingTextView">This now playing TextView</string>
-    <string name="genresTextView">This is genres TextView</string>
-    <string name="buyMoreSongsTextView">This buy more songs TextView</string>
+    <!-- now_playing_layout texts -->
+    <string name="songName">Artist name\n Song name</string>
+    <string name="songTimeStart">0:00</string>
+    <string name="songTimeEnd">3:36</string>
 
-    <string name="songNamePlayNowTextView">A song name</string>
-
+    <!-- buy_songs_layout texts -->
+    <string name="checkoutButton">Proceed to checkout</string>
 
     <!-- Explanation TextViews -->
-    <string name="explanationPlaylist">This activity should show playlist\s songs in a ListView. It also has
-    back button at the top that sends explicit Intent to the main activity</string>
-    <string name="explanationFavorites">This activity should show user selected favorite songs in a
-        ListView. It also has back button at the top that sends explicit Intent to the main activity</string>
+    <!--/=======================================================================================/-->
+    <string name="explanationPlaylist">This activity should show playlist\'s songs in a ListView.
+        When pressed on a song in a list explicit Intent is being sent to NowPlayingActivity
+    </string>
+    <string name="explanationFavorites">This activity should show user\'s selected favorite songs in
+        a ListView. When pressed on a song in a list explicit Intent is being sent to
+        NowPlayingActivity
+    </string>
     <string name="explanationHomeActivity">This is the home activity, that contains playlists,
-    and recent songs ListView. \nPlaylists has ImageView and TextView that is informing user
-    about playlist\'s content. When clicked on the playlist image explicit Intent is being called
-    to the corresponding playlist\'s screen. \nListView would show newly added songs and is scrollable
-        \n At the bottom there is also a TabLayout that works as menu, sending explicit Intents
+    and recent songs ListView.\n
+        Playlists has ImageView and TextView that is informing user about playlist\'s content.
+        When clicked on the playlist image explicit Intent is being called to the corresponding
+        playlist\'s screen.\n
+        ListView would show newly added songs and is scrollable When pressed on a song in a list
+        explicit Intent is being sent to NowPlayingActivity\n
+        At the bottom there is also a TabLayout that works as menu, sending explicit Intent
         depending on the ImageView that is pressed.
     </string>
     <string name="explanationSearch">This activity should be able to show up songs or playlists
     that matches what user entered in a ListView and open them up when clicked by sending explicit
-        Intent to the NowPlayingActivity</string>
+        Intent to the NowPlayingActivity
+    </string>
     <string name="explanationBuySongs">This activity should be able to show up songs in a ListView
         that were added to the cart by the user. When user clicks on "Proceed to checkout" button
-        implicit Intent will be sent to a web browser with a link to pay for the songs. </string>
+        implicit Intent will be sent to a web browser with a link to pay for the songs.
+    </string>
     <string name="explanationNowPlaying">This activity should be able to show song image,
     play, stop, change song, shuffle songs and activate repeat modes. MediaPlayer class is needed to
         add this functionality\nThere are a back button at the top which sends explicit intent to
         MainActivity. \nPressing favorite icon should add
     the song to favorite playlist.\nPressing add to cart icon should add the song to the cart.
     </string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!--/=======================================================================================/-->
 </resources>

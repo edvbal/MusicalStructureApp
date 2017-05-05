@@ -8,23 +8,13 @@ import android.widget.ImageView;
 
 
 public class SearchActivity extends AppCompatActivity {
-    ImageView backToHome;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.search_layout);
-
-        backToHome = (ImageView) findViewById(R.id.backToHome);
-
-        backToHome.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(intent);
-            }
-        });
     }
 
+    // Phone back button will return to MainActivity
     @Override
     public void onBackPressed() {
         //super.onBackPressed();

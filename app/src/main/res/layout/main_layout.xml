@@ -1,110 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/background"
-    android:fillViewport="true"
-    android:orientation="vertical"
+    style="@style/parentLinearLayout"
     tools:context="com.example.android.musicalstructureapp.MainActivity">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:background="@color/backgroundPlayNow"
-        android:gravity="center_vertical"
-        android:paddingLeft="16dp"
-        android:text="Playlists"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:layout_marginBottom="16dp"/>
+        style="@style/labelTextViews"
+        android:text="@string/playlists" />
+
+    <View style="@style/divider" />
 
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="9">
-
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/playlist_scroll_height">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            style="@style/playlistLinearLayout"
+            android:layout_marginBottom="@dimen/activity_margin">
+
 
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/activity_margin"
                 android:scrollbars="none">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                    <LinearLayout style="@style/playlistLinearLayout">
 
                         <ImageView
                             android:id="@+id/playlist1"
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
-                            android:paddingLeft="16dp"
+                            style="@style/playlistImageViews"
                             android:src="@drawable/electro_house" />
 
                         <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center_horizontal"
-                            android:text="Electro House"
-                            android:paddingLeft="16dp"
-
-                            android:textColor="@color/appBarText" />
+                            style="@style/playListTextViews"
+                            android:text="@string/electroHouse" />
 
                     </LinearLayout>
 
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                    <LinearLayout style="@style/playlistLinearLayout">
 
                         <ImageView
                             android:id="@+id/playlist2"
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
-                            android:paddingLeft="16dp"
+                            style="@style/playlistImageViews"
                             android:src="@drawable/favorite_music" />
 
                         <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center_horizontal"
-                            android:paddingLeft="16dp"
-                            android:text="Favorite music"
-                            android:textColor="@color/appBarText" />
+                            style="@style/playListTextViews"
+                            android:text="@string/favoriteMusic" />
 
                     </LinearLayout>
 
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                    <LinearLayout style="@style/playlistLinearLayout">
 
                         <ImageView
                             android:id="@+id/playlistAdd"
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
-                            android:paddingLeft="16dp"
+                            style="@style/playlistImageViews"
                             android:src="@drawable/add_playlist" />
 
                         <TextView
-                            android:layout_width="150dp"
-                            android:layout_height="wrap_content"
-                            android:gravity="center_horizontal"
-                            android:paddingLeft="16dp"
-                            android:text="Add playlist"
-                            android:textColor="@color/appBarText" />
+                            style="@style/playListTextViews"
+
+                            android:text="@string/addPlaylist" />
 
                     </LinearLayout>
 
@@ -112,75 +74,70 @@
 
             </HorizontalScrollView>
 
-
         </LinearLayout>
+
     </ScrollView>
+
+    <View
+        style="@style/divider"
+        android:layout_marginTop="6dp" />
+
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:background="@color/backgroundPlayNow"
-        android:gravity="center_vertical"
-        android:paddingLeft="16dp"
-        android:text="Recent songs"
-        android:textAlignment="center"
-        android:textColor="@color/white" />
+        style="@style/labelTextViews"
+        android:layout_marginBottom="@dimen/margin_6dp"
+        android:text="@string/recentSongs" />
+
+    <View style="@style/divider" />
 
     <ListView
         android:id="@+id/listView"
-        android:layout_width="match_parent"
+        style="@style/listView"
         android:layout_height="0dp"
-        android:layout_weight="3">
+        android:layout_weight="6">
 
     </ListView>
+
+    <View style="@style/divider" />
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="8">
+        android:layout_weight="5">
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            android:text="@string/explanationHomeActivity"
-            android:textColor="@color/white" />
+            style="@style/explanationTextView"
+            android:text="@string/explanationHomeActivity" />
     </ScrollView>
 
     <android.support.design.widget.TabLayout
         android:id="@+id/tabLayout"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:background="@color/backgroundPlayNow">
+        android:background="@color/colorPrimary">
 
         <android.support.design.widget.TabItem
             android:id="@+id/homeMenu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/tabItems"
             android:icon="@drawable/home_icon" />
 
         <android.support.design.widget.TabItem
             android:id="@+id/nowPlayingMenu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/tabItems"
             android:icon="@drawable/now_playing_icon" />
 
         <android.support.design.widget.TabItem
             android:id="@+id/favoritesMenu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/tabItems"
             android:icon="@drawable/favorites_icon" />
 
         <android.support.design.widget.TabItem
             android:id="@+id/searchMenu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/tabItems"
             android:icon="@drawable/search_icon" />
 
         <android.support.design.widget.TabItem
             android:id="@+id/shoppingMenu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/tabItems"
             android:icon="@drawable/shopping_icon" />
     </android.support.design.widget.TabLayout>
 

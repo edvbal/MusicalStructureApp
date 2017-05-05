@@ -17,15 +17,55 @@
             </intent-filter>
         </activity>
         <activity android:name=".BuySongsActivity"
-            android:label="Buy Songs"/>
+            android:label="@string/buySongs"
+            android:parentActivityName=".MainActivity">
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+            />
+        </activity>
+
         <activity android:name=".FavoritesActivity"
-            android:label="Favorites"/>
+            android:label="@string/favorites"
+            android:parentActivityName=".MainActivity">
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+            />
+        </activity>
+
         <activity android:name=".NowPlayingActivity"
-            android:label="Now Playing"/>
+            android:label="@string/nowPlaying"
+            android:parentActivityName=".MainActivity">
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+            />
+        </activity>
+
         <activity android:name=".SearchActivity"
-            android:label="Search"/>
+            android:label="@string/search"
+            android:parentActivityName=".MainActivity">
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+            />
+        </activity>
+
         <activity android:name=".PlaylistActivity"
-            android:label="Playlist"/>
+            android:label="@string/playlist"
+            android:parentActivityName=".MainActivity">
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+            />
+        </activity>
+
 
     </application>
 

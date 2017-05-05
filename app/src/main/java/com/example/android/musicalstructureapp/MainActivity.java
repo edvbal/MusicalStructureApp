@@ -5,8 +5,14 @@ import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -15,6 +21,11 @@ public class MainActivity extends AppCompatActivity {
     ImageView playList2;
     ImageView playListAdd;
     TabLayout tabLayout;
+
+    ListView recentSongs;
+
+    // Create ArrayList for songs
+    ArrayList<String> songs = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +37,29 @@ public class MainActivity extends AppCompatActivity {
         playList2 = (ImageView) findViewById(R.id.playlist2);
         playListAdd = (ImageView) findViewById(R.id.playlistAdd);
 
+        recentSongs = (ListView) findViewById(R.id.listView);
+
         tabLayout = (TabLayout) findViewById(R.id.tabLayout);
+
+        // Set up ListView with our ArrayAdapter that is filled with songs from ArrayList
+        songs.add("Artist Name \nSong Name");
+        songs.add("Artist Name \nSong Name");
+        songs.add("Artist Name \nSong Name");
+        songs.add("Artist Name \nSong Name");
+        songs.add("Artist Name \nSong Name");
+        songs.add("Artist Name \nSong Name");
+        songs.add("Artist Name \nSong Name");
+        songs.add("Artist Name \nSong Name");
+        ArrayAdapter<String> songsAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, songs);
+        recentSongs.setAdapter(songsAdapter);
+        // When clicked on ListView item Intent is being sent to NowPlayingActivity
+        recentSongs.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(MainActivity.this, NowPlayingActivity.class);
+                startActivity(intent);
+            }
+        });
 
         playList1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,10 +78,10 @@ public class MainActivity extends AppCompatActivity {
         playListAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(),"Feature needs to be implemented",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Feature needs to be implemented", Toast.LENGTH_SHORT).show();
             }
         });
-
+        // Selects Intent method depending on which TabLayout item is pressed
         tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
@@ -70,10 +103,12 @@ public class MainActivity extends AppCompatActivity {
                     default:
                 }
             }
+
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {
 
             }
+
             @Override
             public void onTabReselected(TabLayout.Tab tab) {
 
@@ -82,9 +117,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Launching new activity from menu
+     * Methods to launch explicit Intent to other Activity in this app
      */
-
     private void searchActivity() {
         Intent i = new Intent(MainActivity.this, SearchActivity.class);
         startActivity(i);

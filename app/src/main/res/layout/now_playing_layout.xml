@@ -1,165 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fillViewport="true"
-    android:background="@drawable/now_playing_bg"
-    tools:context="com.example.android.musicalstructureapp.NowPlayingActivity"
-    >
+    style="@style/parentScrollView"
+    tools:context="com.example.android.musicalstructureapp.NowPlayingActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <ImageView
-            android:id="@+id/backToHome"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/back_to_home_icon"
-            android:paddingLeft="16dp"
-            android:paddingTop="16dp"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/explanationNowPlaying"
-            android:textColor="@color/white"/>
+    <LinearLayout style="@style/subLinearLayout">
 
         <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/song_image"
-            android:layout_gravity="center"
-            android:paddingTop="32dp"/>
+            style="@style/songImage"
+            android:src="@drawable/song_image" />
+
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingRight="16dp"
-            android:paddingLeft="16dp"
-
+            style="@style/subLinearLayout"
             android:orientation="horizontal">
+
             <ImageView
                 android:id="@+id/addToCart"
-                android:paddingTop="16dp"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:src="@drawable/add_to_cart_icon"/>
+                style="@style/songIcons"
+                android:layout_marginLeft="@dimen/activity_margin"
+                android:src="@drawable/add_to_cart_icon" />
 
             <TextView
-                android:layout_width="0dp"
-                android:layout_weight="10"
-                android:layout_height="50dp"
-                android:text="Song Name"
-                android:paddingTop="16dp"
-                android:paddingLeft="16dp"
-                android:textSize="20sp"
-                android:gravity="bottom"
-                android:textAlignment="center"
-                android:layout_gravity="center"
-                android:textColor="@color/white"/>
+                style="@style/songName"
+                android:text="@string/songName" />
+
             <ImageView
                 android:id="@+id/makeFavorite"
-                android:paddingTop="16dp"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:src="@drawable/make_favorite_icon"/>
+                style="@style/songIcons"
+                android:layout_marginRight="@dimen/activity_margin"
+                android:src="@drawable/make_favorite_icon" />
         </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="32dp"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
 
-        android:orientation="horizontal">
-        <TextView
-            android:id="@+id/startTime"
+        <LinearLayout
+            style="@style/subLinearLayout"
+            android:orientation="horizontal"
 
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="50dp"
-            android:text="0:00"
-            android:paddingTop="14dp"
-            android:textColor="@color/white"
-            android:textAlignment="center"
-            android:gravity="center_vertical"
-            />
-        <SeekBar
-            android:id="@+id/seekBar"
-            android:layout_width="0dp"
-            android:paddingTop="16dp"
-            android:layout_weight="5"
+            android:paddingTop="@dimen/song_image">
 
-            android:layout_height="50dp"/>
-        <TextView
-            android:id="@+id/endTime"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="50dp"
-            android:text="3:36"
-            android:paddingRight="16dp"
+            <TextView
+                android:id="@+id/startTime"
+                style="@style/songTime"
+                android:layout_marginLeft="@dimen/activity_margin"
+                android:text="@string/songTimeStart" />
 
-            android:textColor="@color/white"
-            android:textAlignment="center"
-            android:gravity="center_vertical"
-            />
+            <SeekBar
+                android:id="@+id/seekBar"
+                style="@style/seekBar" />
+
+            <TextView
+                android:id="@+id/endTime"
+                style="@style/songTime"
+                android:layout_marginRight="@dimen/activity_margin"
+                android:text="@string/songTimeEnd" />
 
         </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
 
-        android:orientation="horizontal">
-        <ImageView
-            android:id="@+id/shuffle"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:src="@drawable/shuffle_icon"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
 
-        <ImageView
-            android:id="@+id/prevSong"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:orientation="horizontal">
 
-            android:src="@drawable/prev_song_icon"/>
+            <ImageView
+                android:id="@+id/shuffle"
+                style="@style/songControlBars"
+                android:layout_marginLeft="@dimen/activity_margin"
+                android:src="@drawable/shuffle_icon" />
 
-        <ImageView
-            android:id="@+id/playSong"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="100dp"
-            android:layout_gravity="center"
+            <ImageView
+                android:id="@+id/prev_song"
+                style="@style/songControlBars"
+                android:src="@drawable/prev_song_icon" />
 
-            android:src="@drawable/play_song"/>
+            <ImageView
+                android:id="@+id/play_song"
+                style="@style/songControlBars"
+                android:layout_height="100dp"
+                android:src="@drawable/play_song" />
 
-        <ImageView
-            android:id="@+id/nextSong"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            <ImageView
+                android:id="@+id/next_song"
+                style="@style/songControlBars"
+                android:src="@drawable/next_song_icon" />
 
-            android:src="@drawable/next_song_icon"/>
+            <ImageView
+                android:id="@+id/repeat"
+                style="@style/songControlBars"
+                android:layout_marginRight="@dimen/activity_margin"
+                android:src="@drawable/repeat_icon" />
+        </LinearLayout>
 
-        <ImageView
-            android:id="@+id/repeat"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
+        <TextView
+            style="@style/explanationTextView"
+            android:text="@string/explanationNowPlaying"
 
-            android:src="@drawable/repeat_icon"/>
+            />
     </LinearLayout>
-</LinearLayout>
-
 
 </ScrollView>

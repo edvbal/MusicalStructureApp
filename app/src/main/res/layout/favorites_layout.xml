@@ -2,39 +2,21 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fillViewport="true"
-    android:background="@drawable/playlist_bg"
+    style="@style/parentScrollView"
     tools:context="com.example.android.musicalstructureapp.FavoritesActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <ImageView
-            android:id="@+id/backToHome"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/back_to_home_icon"
-            android:paddingLeft="16dp"
-            android:paddingTop="16dp"
-            android:paddingBottom="16dp"/>
+    <LinearLayout style="@style/subLinearLayout">
+
+        <TextView
+            style="@style/explanationTextView"
+            android:text="@string/explanationPlaylist" />
 
         <ListView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-        </ListView>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/explanationPlaylist"
-            android:textColor="@color/white"/>
+            android:id="@+id/listView"
+            style="@style/listView"
+            android:layout_height="wrap_content"/>
 
     </LinearLayout>
-
-
 
 
 </ScrollView>

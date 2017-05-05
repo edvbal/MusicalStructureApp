@@ -1,11 +1,162 @@
 <resources>
-
+    <!-- Global styles -->
+    <!--/=======================================================================================/-->
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/background</item>
         <item name="colorPrimaryDark">@color/background</item>
         <item name="colorAccent">@color/background</item>
     </style>
+    <!-- ActionBar. -->
+    <style name="ActionBar" parent="ThemeOverlay.AppCompat.ActionBar">
+        <item name="android:displayOptions">homeAsUp</item>
+    </style>
+    <!-- Parent ScrollView -->
+    <style name="parentScrollView" parent="AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:fillViewport">true</item>
+        <item name="android:background">@drawable/main_bg</item>
+    </style>
+    <!-- Parent LinearLayout -->
+    <style name="parentLinearLayout" parent="AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:background">@drawable/main_bg</item>
+    </style>
+    <!-- LinearLayout sub Activities -->
+    <style name="subLinearLayout" parent="AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+    <!-- ListViews -->
+    <style name="listView" parent="AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginBottom">@dimen/margin_6dp</item>
+        <item name="android:layout_marginLeft">@dimen/activity_margin</item>
+        <item name="android:layout_marginRight">@dimen/activity_margin</item>
+        <item name="android:background">@color/colorWhiteTransparent25</item>
+    </style>
+    <!-- Divider. -->
+    <style name="divider" parent="AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/divider_height</item>
+        <item name="android:background">@color/colorWhiteTransparent80</item>
+        <item name="android:layout_marginLeft">@dimen/activity_margin</item>
+        <item name="android:layout_marginRight">@dimen/activity_margin</item>
+        <item name="android:layout_marginBottom">@dimen/margin_6dp</item>
+    </style>
+    <!-- Activity explanation TextViews. -->
+    <style name="explanationTextView" parent="AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/activity_margin</item>
+        <item name="android:background">@color/colorWhiteTransparent25</item>
+        <item name="android:textColor">@android:color/background_dark</item>
+    </style>
+    <!--/=======================================================================================/-->
+
+    <!-- main_layout -->
+    <!--/=======================================================================================/-->
+    <!-- Label TextViews -->
+    <style name="labelTextViews" parent="AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/label_text_views</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <!-- Playlist's TextViews -->
+    <style name="playListTextViews" parent="AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:paddingLeft">@dimen/activity_margin</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <!-- ImageViews -->
+    <style name="playlistImageViews" parent="AppTheme">
+        <item name="android:layout_width">@dimen/playlist_image</item>
+        <item name="android:layout_height">@dimen/playlist_image</item>
+        <item name="android:paddingLeft">@dimen/activity_margin</item>
+    </style>
+    <!-- Vertical LinearLayouts -->
+    <style name="playlistLinearLayout" parent="AppTheme">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+    <!-- TabLayout items -->
+    <style name="tabItems" parent="AppTheme">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <!--/=======================================================================================/-->
+
+    <!-- buy_songs_layout -->
+    <!--/=======================================================================================/-->
+    <style name="checkoutButton" parent="AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/activity_margin</item>
+        <item name="android:background">@drawable/checkout_button</item>
+    </style>
+    <!--/=======================================================================================/-->
+
+    <!-- now_playing_layout -->
+    <!--/=======================================================================================/-->
+    <!-- Song ImageView -->
+    <style name="songImage" parent="AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:paddingTop">@dimen/song_image</item>
+    </style>
+    <!-- song buy/like icons ImageView -->
+    <style name="songIcons" parent="AppTheme">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">70dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:paddingTop">@dimen/song_name_pad_top</item>
+    </style>
+    <!-- Song name TextView -->
+    <style name="songName" parent="AppTheme">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">@dimen/song_name_height</item>
+        <item name="android:layout_weight">10</item>
+        <item name="android:paddingTop">@dimen/song_name_pad_top</item>
+        <item name="android:textSize">@dimen/song_text_size</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <!-- Song time TextView -->
+    <style name="songTime" parent="AppTheme">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">@dimen/song_time_height</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:paddingTop">@dimen/song_name_pad_top</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <!-- Song SeekBar -->
+    <style name="seekBar" parent="AppTheme">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">@dimen/seekbar_height</item>
+        <item name="android:layout_weight">5</item>
+        <item name="android:paddingTop">@dimen/song_name_pad_top</item>
+    </style>
+    <!-- Song control bars -->
+    <style name="songControlBars" parent="AppTheme">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+    <!--/=======================================================================================/-->
 
 </resources>
