@@ -79,9 +79,9 @@ public class NowPlayingActivity extends AppCompatActivity {
     // Phone back button will return to MainActivity
     @Override
     public void onBackPressed() {
-        //super.onBackPressed();
         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
         startActivity(intent);
+        finish();
     }
 
 }
